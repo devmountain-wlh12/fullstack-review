@@ -1,0 +1,26 @@
+.add {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 500px;
+  height: 600px;
+  background: linear-gradient(rgba(255, 182, 182, 0.596), rgba(255, 230, 185, 0.596));
+  border-radius: 7px;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.add textarea {
+  resize: none;
+}
+.add .img-container {
+  width: 90%;
+  height: 270px;
+}
+.add i {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}

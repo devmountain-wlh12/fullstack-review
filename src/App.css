@@ -47,7 +47,11 @@ table {
 }
 /* ----------------- End Reset File ----------------- */
 
-
+body {
+  background: url('https://josh-mccann.com/images/pic11.JPG');
+  background-size: cover;
+  min-height: 200vh;
+}
 .App {
   text-align: center;
 }
