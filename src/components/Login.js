@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import {updateUserInfo} from '../ducks/reducer'
 import {connect} from 'react-redux'
+import Swal from 'sweetalert2'
 
 class Login extends Component {
   state = {
@@ -20,10 +21,11 @@ class Login extends Component {
       .post('/auth/login', {email, password})
       .then(res => {
         this.props.updateUserInfo(res.data.user)
-        alert(res.data.message)
+        Swal.fire(res.data.message)
+        this.props.history.push('/dashboard')
       })
       .catch(err => {
-        alert(err.response.data.message)
+        Swal.fire(err.response.data.message)
       })
   }
   

@@ -30,5 +30,9 @@ module.exports = {
     }
     req.session.user = {user_id, email, name, profile_img}
     res.status(200).send({message: 'Logged In', user: req.session.user})
+  },
+  logout: (req, res) => {
+    req.session.destroy()
+    res.status(200).send({message: 'Logged out'})
   }
 }
