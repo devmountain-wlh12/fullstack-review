@@ -2,6 +2,8 @@
   "name": "fullstack-review",
   "version": "0.1.0",
   "private": true,
+  "main": "server/server.js",
+  "proxy": "http://localhost:1337",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
