@@ -1,15 +1,20 @@
 import React from 'react'
 import logo from '../assets/Instamilligram.svg'
 import './Header.css'
+import {connect} from 'react-redux'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
-      <div className='profile-pic'></div>
+      {props.profile_img && <img src={props.profile_img} alt=""/>}
       <img src={logo} alt='logo' />
-      <div className='logout'></div>
+      {props.name && <button>Logout</button>}
     </header>
   )
 }
 
-export default Header
+function mapStateToProps(reduxState) {
+  return reduxState
+}
+
+export default connect(mapStateToProps)(Header)
